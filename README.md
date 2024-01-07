@@ -41,7 +41,7 @@ import (
 func main() {
 	mf := &MemoryFile{name: "test.txt"}
 	text := "Nothing read"
-	text, err := WithResource(mf, func(a *MemoryFile) (string, error) {
+	text, err := WithContext(mf, func(a *MemoryFile) (string, error) {
 		a.Open()
 		result, err := a.Read()
 		return result, err

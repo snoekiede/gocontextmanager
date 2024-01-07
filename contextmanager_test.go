@@ -53,7 +53,7 @@ func TestContextManager_Dispose(t *testing.T) {
 	value := 42
 	disposeCalled := false
 
-	cm := &contextmanager.ContextManager[int]{Value: value}
+	cm := &contextmanager.ContextManager[int]{Context: value}
 	cm.Dispose(func(a int) {
 		disposeCalled = true
 	})

@@ -13,7 +13,7 @@ func TestWithResource(t *testing.T) {
 	expectedResult := "success"
 	expectedError := errors.New("error")
 
-	result, err := contextmanager.WithResource(value, func(a int) (string, error) {
+	result, err := contextmanager.WithContext(value, func(a int) (string, error) {
 		// Perform some action with the resource
 		return expectedResult, expectedError
 	}, func(element int) {
@@ -32,7 +32,7 @@ func TestWithResource(t *testing.T) {
 	value = 0
 	expectedError = errors.New("error during execution")
 
-	result, err = contextmanager.WithResource(value, func(a int) (string, error) {
+	result, err = contextmanager.WithContext(value, func(a int) (string, error) {
 		// Perform some action with the resource
 		return "", expectedError
 	}, func(element int) {

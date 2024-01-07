@@ -1,6 +1,6 @@
 # Introduction
 
-This is a simple implementation of a context manager in Go, in the vein of Python's 'with' statement and C#'s 'using' statement, providing automatic disposal of objects, using the provided Dispose method.
+This is a simple implementation of a context manager in Go, in the vein of Python's 'with' statement and C#'s 'using' statement, providing automatic disposal of objects, using the provided Dispose method. This package is still in version 0.1.0 so use with caution.
 
 ## Example use
 Imagine you are working with an imaginary *Memoryfile* struct which looks like this:
@@ -55,3 +55,6 @@ func main() {
 }
 ~~~
 
+## Version list
+
+* 0.1.0 initial commit

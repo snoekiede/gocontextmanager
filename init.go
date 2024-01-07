@@ -1,0 +1,5 @@
+package contextmanager
+
+func init() {
+
+}
